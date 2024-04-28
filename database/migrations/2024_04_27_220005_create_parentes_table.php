@@ -14,7 +14,6 @@ return new class extends Migration
     {
         Schema::create('parentes', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Eleve::class)->constrained()->cascadeOnDelete();
             $table->string("cin", 10)->unique();
             $table->string("prenom", 20);
             $table->string("nom", 20);
